@@ -1,0 +1,5 @@
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "Guardia Angel script by Dones";
+	Text = " Note: Use an alt";
+	Icon = ""})
+Duration = 5;
