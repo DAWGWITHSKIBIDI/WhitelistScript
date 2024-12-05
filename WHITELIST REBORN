@@ -1,0 +1,28 @@
+game.Players.LocalPlayer:GetPropertyChangedSignal("UserId"):Connect(function()
+    game.Players.LocalPlayer:Kick("GET OUT!!!!")
+end)
+
+local whitelistedNames = {
+    "bobbythebuilder2929", 
+    "Notprogamerreal", 
+    "babythrower", 
+    "anti_uranium0992", 
+    "lol_idk1234511", 
+    "player6"
+}
+
+local player = game.Players.LocalPlayer
+
+local isWhitelisted = false
+for _, name in ipairs(whitelistedNames) do
+    if player.Name == name then
+        isWhitelisted = true
+        break
+    end
+end
+
+if isWhitelisted then
+    print("Whitelisted!")
+else
+    player:Kick("You are not whitelisted")
+end
